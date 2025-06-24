@@ -13,8 +13,8 @@ case ${TASK} in
         LANGUAGE_MODEL=$3
         VISION_MODEL=$4
         bash run.sh ${ARCH} pretrain ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
-        bash run.sh ${ARCH} finetune ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
-        bash run.sh ${ARCH} test ${OUTPUT_DIR}/mobilevlm_v2-2.finetune
+        #bash run.sh ${ARCH} finetune ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
+        # bash run.sh ${ARCH} test ${OUTPUT_DIR}/mobilevlm_v2-2.finetune
     ;;
     "pretrain")
         echo ">>> Start Pre-training ..."
@@ -22,13 +22,14 @@ case ${TASK} in
         LANGUAGE_MODEL=$3
         VISION_MODEL=$4
         OUTPUT_DIR=$5
+        MASTER_PORT=${MASTER_PORT:-29500}
         OUTPUT_DIR_PT=${OUTPUT_DIR}/mobilevlm_v2-1.pretrain
         mkdir -p ${OUTPUT_DIR_PT}
-        deepspeed mobilevlm/train/train_mem.py \
+        deepspeed --master_port ${MASTER_PORT} mobilevlm/train/train_mem.py \
             --deepspeed scripts/deepspeed/zero2.json \
             --model_name_or_path ${LANGUAGE_MODEL} \
             --version plain \
-            --data_path data/pretrain_data/share-captioner_coco_lcs_sam_1246k_1107.json \
+            --data_path data/pretrain_data/filtered_llava_samples.json \
             --image_folder data/pretrain_data \
             --vision_tower ${VISION_MODEL} \
             --vision_tower_type clip \
@@ -67,14 +68,15 @@ case ${TASK} in
         LANGUAGE_MODEL=$3
         VISION_MODEL=$4
         OUTPUT_DIR=$5
+        MASTER_PORT=${MASTER_PORT:-29500}
         OUTPUT_DIR_PT=${OUTPUT_DIR}/mobilevlm_v2-1.pretrain
         OUTPUT_DIR_FT=${OUTPUT_DIR}/mobilevlm_v2-2.finetune
         mkdir -p ${OUTPUT_DIR_FT}
-        deepspeed mobilevlm/train/train_mem.py \
+        deepspeed --master_port ${MASTER_PORT} mobilevlm/train/train_mem.py \
             --deepspeed scripts/deepspeed/zero3.json \
             --model_name_or_path ${OUTPUT_DIR_PT} \
             --version v1 \
-            --data_path data/finetune_data/MobileVLM_V2_FT_Mix2M.json \
+            --data_path data/finetune_data/filtered_sam_images.json \
             --image_folder data/finetune_data \
             --vision_tower ${VISION_MODEL} \
             --vision_tower_type clip \

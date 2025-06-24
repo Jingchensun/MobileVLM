@@ -1,3 +1,5 @@
+export MASTER_PORT=$((12000 + RANDOM % 10000))
+
 # LANGUAGE_MODEL=/path/to/your/MobileLLaMA-1.4B-Chat  # or 2.7B
 # VISION_MODEL=/path/to/your/clip-vit-large-patch14-336
 LANGUAGE_MODEL=mtgv/MobileLLaMA-1.4B-Chat  # or 2.7B

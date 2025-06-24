@@ -25,3 +25,4 @@ tqdm
 sentencepiece
 accelerate
 scikit-learn
+transformers==4.31.0
