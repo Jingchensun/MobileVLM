@@ -29,8 +29,8 @@ case ${TASK} in
             --deepspeed scripts/deepspeed/zero2.json \
             --model_name_or_path ${LANGUAGE_MODEL} \
             --version plain \
-            --data_path data/pretrain_data/filtered_llava_samples.json \
-            --image_folder data/pretrain_data \
+            --data_path dataset/pretrain_data/filtered_llava_samples.json \
+            --image_folder dataset/pretrain_data \
             --vision_tower ${VISION_MODEL} \
             --vision_tower_type clip \
             --mm_projector_type ldpnetv2 \
@@ -76,8 +76,8 @@ case ${TASK} in
             --deepspeed scripts/deepspeed/zero3.json \
             --model_name_or_path ${OUTPUT_DIR_PT} \
             --version v1 \
-            --data_path data/finetune_data/filtered_sam_images.json \
-            --image_folder data/finetune_data \
+            --data_path dataset/finetune_data/filtered_sam_images.json \
+            --image_folder dataset/finetune_data \
             --vision_tower ${VISION_MODEL} \
             --vision_tower_type clip \
             --mm_projector_type ldpnetv2 \
@@ -132,8 +132,8 @@ case ${TASK} in
             --learning_rate 2e-4 \
             --model_name_or_path ${OUTPUT_DIR_PT} \
             --version v1 \
-            --data_path data/finetune_data/MobileVLM_V2_FT_Mix2M.json \
-            --image_folder data/finetune_data \
+            --data_path dataset/finetune_data/MobileVLM_V2_FT_Mix2M.json \
+            --image_folder dataset/finetune_data \
             --vision_tower ${VISION_MODEL} \
             --vision_tower_type clip \
             --mm_projector_type ldpnetv2 \
