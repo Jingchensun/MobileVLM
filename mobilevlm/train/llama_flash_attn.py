@@ -82,26 +82,27 @@ def forward(
         output = output.view(bsz, q_len, -1)
     else:
         qkv = qkv.reshape(bsz, q_len, -1)
-        qkv, indices, cu_q_lens, max_s = unpad_input(qkv, key_padding_mask)
-        # qkv, indices, cu_q_lens = unpad_input(qkv, key_padding_mask)
-        # max_s = cu_q_lens.max().item()  # 手动推算 max sequence length
+        # Handle different flash_attention versions
+        unpad_result = unpad_input(qkv, key_padding_mask)
+        if len(unpad_result) == 3:
+            # Older version: (qkv, indices, cu_q_lens)
+            qkv, indices, cu_q_lens = unpad_result
+            max_s = cu_q_lens.max().item()
+        elif len(unpad_result) == 4:
+            # Middle version: (qkv, indices, cu_q_lens, max_s)
+            qkv, indices, cu_q_lens, max_s = unpad_result
+        elif len(unpad_result) == 5:
+            # Newer version: (qkv, indices, cu_q_lens, max_s, extra)
+            qkv, indices, cu_q_lens, max_s, _ = unpad_result
+        else:
+            raise ValueError(f"Unexpected number of return values from unpad_input: {len(unpad_result)}")
+        
         qkv = qkv.view(-1, 3, self.num_heads, self.head_dim)
         output_unpad = flash_attn_unpadded_qkvpacked_func(
             qkv, cu_q_lens, max_s, 0.0, softmax_scale=None, causal=True
         )
         output_unpad = output_unpad.reshape(-1, self.num_heads * self.head_dim)
         output = pad_input(output_unpad, indices, bsz, q_len)
-    # else:
-    #     qkv = qkv.reshape(bsz, q_len, -1)
-    #     qkv, indices, cu_q_lens = unpad_input(qkv, key_padding_mask)
-    #     max_s = cu_q_lens.max().item()
-    #     qkv = qkv.reshape(-1, 3, self.num_heads, self.head_dim)  # ✅ 修复 view 报错
-    #     output_unpad = flash_attn_unpadded_qkvpacked_func(
-    #         qkv, cu_q_lens, max_s, 0.0, softmax_scale=None, causal=True
-    #     )
-    #     output_unpad = output_unpad.reshape(-1, self.num_heads * self.head_dim)
-    #     output = pad_input(output_unpad, indices, bsz, q_len)
-
 
     return self.o_proj(output), None, past_key_value
 
