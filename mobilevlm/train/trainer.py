@@ -37,8 +37,17 @@ def split_to_even_chunks(indices, lengths, num_chunks):
 def get_modality_length_grouped_indices(lengths, batch_size, world_size, generator=None):
     # We need to use torch for the random part as a distributed sampler will set the random seed for torch.
     assert all(l != 0 for l in lengths), "Should not have zero length."
-    mm_indices, mm_lengths = zip(*[(i, l) for i, l in enumerate(lengths) if l > 0])
-    lang_indices, lang_lengths = zip(*[(i, -l) for i, l in enumerate(lengths) if l < 0])
+    
+    # Separate multimodal and language-only samples
+    mm_samples = [(i, l) for i, l in enumerate(lengths) if l > 0]
+    lang_samples = [(i, -l) for i, l in enumerate(lengths) if l < 0]
+    
+    # If we don't have both types of samples, fall back to regular length grouping
+    if len(mm_samples) == 0 or len(lang_samples) == 0:
+        return get_length_grouped_indices(lengths, batch_size, world_size, generator)
+    
+    mm_indices, mm_lengths = zip(*mm_samples)
+    lang_indices, lang_lengths = zip(*lang_samples)
 
     assert len(mm_indices) > 0, "Should have at least one multimodal sample."
     assert len(lang_indices) > 0, "Should have at least one language sample."

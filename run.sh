@@ -12,9 +12,10 @@ case ${TASK} in
         mkdir -p ${OUTPUT_DIR}
         LANGUAGE_MODEL=$3
         VISION_MODEL=$4
-        bash run.sh ${ARCH} pretrain ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
-        #bash run.sh ${ARCH} finetune ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
-        # bash run.sh ${ARCH} test ${OUTPUT_DIR}/mobilevlm_v2-2.finetune
+        # bash run.sh ${ARCH} pretrain ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
+        bash run.sh ${ARCH} finetune ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
+        # bash run.sh ${ARCH} test ${OUTPUT_DIR}/mobilevlm_v2-1.pretrain
+        #bash run.sh ${ARCH} test ${OUTPUT_DIR}/mobilevlm_v2-2.finetune
     ;;
     "pretrain")
         echo ">>> Start Pre-training ..."
@@ -29,7 +30,7 @@ case ${TASK} in
             --deepspeed scripts/deepspeed/zero2.json \
             --model_name_or_path ${LANGUAGE_MODEL} \
             --version plain \
-            --data_path dataset/pretrain_data/filtered_llava_samples.json \
+            --data_path dataset/pretrain_data/filtered_llava_coco_samples_676k.json \
             --image_folder dataset/pretrain_data \
             --vision_tower ${VISION_MODEL} \
             --vision_tower_type clip \
@@ -69,14 +70,15 @@ case ${TASK} in
         VISION_MODEL=$4
         OUTPUT_DIR=$5
         MASTER_PORT=${MASTER_PORT:-29500}
-        OUTPUT_DIR_PT=${OUTPUT_DIR}/mobilevlm_v2-1.pretrain
+        # OUTPUT_DIR_PT=${OUTPUT_DIR}/mobilevlm_v2-1.pretrain
+        OUTPUT_DIR_PT=outputs/mobilevlm_v2_1.7b_20250629_222342/mobilevlm_v2-1.pretrain
         OUTPUT_DIR_FT=${OUTPUT_DIR}/mobilevlm_v2-2.finetune
         mkdir -p ${OUTPUT_DIR_FT}
         deepspeed --master_port ${MASTER_PORT} mobilevlm/train/train_mem.py \
             --deepspeed scripts/deepspeed/zero3.json \
             --model_name_or_path ${OUTPUT_DIR_PT} \
             --version v1 \
-            --data_path dataset/finetune_data/filtered_sam_images.json \
+            --data_path dataset/finetune_data/filtered_coco_images_990k.json \
             --image_folder dataset/finetune_data \
             --vision_tower ${VISION_MODEL} \
             --vision_tower_type clip \
@@ -132,7 +134,7 @@ case ${TASK} in
             --learning_rate 2e-4 \
             --model_name_or_path ${OUTPUT_DIR_PT} \
             --version v1 \
-            --data_path dataset/finetune_data/MobileVLM_V2_FT_Mix2M.json \
+            --data_path dataset/finetune_data/filtered_coco_images_1114k.json \
             --image_folder dataset/finetune_data \
             --vision_tower ${VISION_MODEL} \
             --vision_tower_type clip \
