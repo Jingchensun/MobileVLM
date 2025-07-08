@@ -8,7 +8,8 @@ TASK=$2
 case ${TASK} in
     "pretrain-finetune-test")
         cd ${WORK_DIR}
-        OUTPUT_DIR=${WORK_DIR}/outputs/${ARCH}_$(date +"%Y%m%d_%H%M%S")
+        OUTPUT_DIR=${WORK_DIR}/outputs
+        #/${ARCH}_$(date +"%Y%m%d_%H%M%S")
         mkdir -p ${OUTPUT_DIR}
         LANGUAGE_MODEL=$3
         VISION_MODEL=$4
@@ -72,10 +73,10 @@ case ${TASK} in
         MASTER_PORT=${MASTER_PORT:-29500}
         # OUTPUT_DIR_PT=${OUTPUT_DIR}/mobilevlm_v2-1.pretrain
         OUTPUT_DIR_PT=outputs/mobilevlm_v2_1.7b_20250629_222342/mobilevlm_v2-1.pretrain
-        OUTPUT_DIR_FT=${OUTPUT_DIR}/mobilevlm_v2-2.finetune
+        OUTPUT_DIR_FT=${OUTPUT_DIR}/mobilevlm_v2-2.finetune-1000steps
         mkdir -p ${OUTPUT_DIR_FT}
         deepspeed --master_port ${MASTER_PORT} mobilevlm/train/train_mem.py \
-            --deepspeed scripts/deepspeed/zero3.json \
+            --deepspeed scripts/deepspeed/zero1.json \
             --model_name_or_path ${OUTPUT_DIR_PT} \
             --version v1 \
             --data_path dataset/finetune_data/filtered_coco_images_990k.json \
@@ -96,8 +97,7 @@ case ${TASK} in
             --gradient_accumulation_steps 1 \
             --evaluation_strategy "no" \
             --save_strategy "steps" \
-            --save_steps 2000 \
-            --save_total_limit 1 \
+            --save_steps 1000 \
             --learning_rate 4e-5 \
             --weight_decay 0. \
             --warmup_ratio 0.03 \
