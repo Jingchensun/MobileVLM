@@ -4,3 +4,2013 @@
 [2025-07-08 16:58:08,681] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
 [2025-07-08 16:58:08,681] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
 [2025-07-08 16:58:08,681] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/onsi/jsun/MobileVLM/dataset/benchmark_data/mme
+=========== Perception ===========
+total score: 891.8969587835134 
+
+	 existence  score: 175.0
+	 count  score: 53.333333333333336
+	 position  score: 53.333333333333336
+	 color  score: 93.33333333333333
+	 posters  score: 39.45578231292517
+	 celebrity  score: 77.94117647058823
+	 scene  score: 149.5
+	 landmark  score: 133.75
+	 artwork  score: 66.25
+	 OCR  score: 50.0
+
+
+['./LaVIN', '\tMME metric: 891.90']
+➡️  Running gqa...
+[2025-07-08 16:59:31,200] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 16:59:31,201] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 16:59:31,203] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 16:59:36,340] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Please make sure to use our provided visual features as gqadataset.org for better comparability. We provide both spatial and object-based features trained on GQA train set.
+In particular please avoid using features from https://github.com/peteanderson80/bottom-up-attention since they were trained on images contained in the GQA validation set and thus may give false scores improvement.
+
+Please consider using --consistency to compute consistency scores for entailed questions.
+If you do so, please provide answers to all questions in val_all_questions.json.
+
+Please consider using --grounding to compute attention scores.
+If you do so, please provide attention maps through --attentions.
+
+Loading scene graphs...
+Loading questions...
+Loading choices...
+Loading predictions...
+
+Binary: 53.51%
+Open: 27.54%
+Accuracy: 39.46%
+Validity: 0.00%
+Plausibility: 0.00%
+Distribution: 3.13 (lower is better)
+
+Accuracy / structural type:
+  choose: 42.25% (1129 questions)
+  compare: 42.28% (589 questions)
+  logical: 50.86% (1803 questions)
+  query: 27.54% (6805 questions)
+  verify: 64.21% (2252 questions)
+
+Accuracy / semantic type:
+  attr: 46.82% (5186 questions)
+  cat: 30.11% (1149 questions)
+  global: 39.49% (157 questions)
+  obj: 48.97% (778 questions)
+  rel: 32.89% (5308 questions)
+
+Accuracy / steps number:
+  1: 56.12% (237 questions)
+  2: 35.40% (6395 questions)
+  3: 40.55% (4266 questions)
+  4: 50.57% (793 questions)
+  5: 46.96% (822 questions)
+  6: 70.73% (41 questions)
+  7: 80.00% (20 questions)
+  8: 100.00% (3 questions)
+  9: 100.00% (1 questions)
+
+Accuracy / words number:
+  3: 29.80% (151 questions)
+  4: 40.16% (630 questions)
+  5: 30.39% (1290 questions)
+  6: 37.75% (2074 questions)
+  7: 42.08% (1642 questions)
+  8: 41.10% (1185 questions)
+  9: 41.76% (1281 questions)
+  10: 42.43% (1249 questions)
+  11: 40.64% (994 questions)
+  12: 42.63% (638 questions)
+  13: 41.13% (462 questions)
+  14: 43.48% (345 questions)
+  15: 42.19% (237 questions)
+  16: 41.03% (117 questions)
+  17: 37.23% (94 questions)
+  18: 28.95% (76 questions)
+  19: 27.91% (43 questions)
+  20: 15.62% (32 questions)
+  21: 36.84% (19 questions)
+  22: 0.00% (12 questions)
+  23: 0.00% (4 questions)
+  24: 50.00% (2 questions)
+  25: 100.00% (1 questions)
+➡️  Running textvqa...
+[2025-07-08 17:04:58,190] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:04:58,190] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:04:58,190] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:05:02,277] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+predictions
+Samples: 5000
+Accuracy: 29.28%
+
+➡️  Running pope...
+[2025-07-08 17:08:39,834] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:08:39,835] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:08:44,039] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:08:45,080] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Category: random, # samples: 2910
+TP	FP	TN	FN	
+735	692	763	720
+Accuracy: 0.5147766323024054
+Precision: 0.5150665732305536
+Recall: 0.5051546391752577
+F1 score: 0.5100624566273421
+Yes ratio: 0.4903780068728522
+0.510, 0.515, 0.515, 0.505, 0.490
+====================================
+Category: adversarial, # samples: 3000
+TP	FP	TN	FN	
+1258	446	1054	242
+Accuracy: 0.7706666666666667
+Precision: 0.7382629107981221
+Recall: 0.8386666666666667
+F1 score: 0.7852684144818977
+Yes ratio: 0.568
+0.785, 0.771, 0.738, 0.839, 0.568
+====================================
+Category: popular, # samples: 3000
+TP	FP	TN	FN	
+1258	399	1101	242
+Accuracy: 0.7863333333333333
+Precision: 0.7592033796016898
+Recall: 0.8386666666666667
+F1 score: 0.7969591384225531
+Yes ratio: 0.5523333333333333
+0.797, 0.786, 0.759, 0.839, 0.552
+====================================
+---> avg acc: 0.6905922107674685
+---> avg f1: 0.6974300031772643
+➡️  Running mmbench...
+[2025-07-08 17:12:20,831] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:12:23,433] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:12:23,440] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:12:26,306] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 10/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 20/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 30/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 40/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 50/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 60/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 70/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 80/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 90/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 100/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 110/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 120/1164, Acc:  0.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 130/1164, Acc:  0.77%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 140/1164, Acc:  0.71%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 150/1164, Acc:  0.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 160/1164, Acc:  0.62%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 170/1164, Acc:  0.59%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 180/1164, Acc:  0.56%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 190/1164, Acc:  0.53%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 200/1164, Acc:  0.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 210/1164, Acc:  0.48%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 220/1164, Acc:  0.45%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 230/1164, Acc:  0.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 240/1164, Acc:  0.42%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 250/1164, Acc:  0.40%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 260/1164, Acc:  0.38%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 270/1164, Acc:  0.37%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 280/1164, Acc:  0.36%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 290/1164, Acc:  0.34%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 300/1164, Acc:  0.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 310/1164, Acc:  0.32%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 320/1164, Acc:  0.31%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 330/1164, Acc:  0.30%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 340/1164, Acc:  0.29%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 350/1164, Acc:  0.29%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 360/1164, Acc:  0.28%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 370/1164, Acc:  0.27%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 380/1164, Acc:  0.26%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 390/1164, Acc:  0.26%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 400/1164, Acc:  0.25%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 410/1164, Acc:  0.24%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 420/1164, Acc:  0.24%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 430/1164, Acc:  0.23%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 440/1164, Acc:  0.23%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 450/1164, Acc:  0.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 460/1164, Acc:  0.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 470/1164, Acc:  0.21%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 480/1164, Acc:  0.21%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 490/1164, Acc:  0.20%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 500/1164, Acc:  0.20%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 510/1164, Acc:  0.20%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 520/1164, Acc:  0.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 530/1164, Acc:  0.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 540/1164, Acc:  0.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 550/1164, Acc:  0.18%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 560/1164, Acc:  0.18%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 570/1164, Acc:  0.18%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 580/1164, Acc:  0.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 590/1164, Acc:  0.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 600/1164, Acc:  0.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 610/1164, Acc:  0.16%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 620/1164, Acc:  0.16%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 630/1164, Acc:  0.16%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 640/1164, Acc:  0.16%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 650/1164, Acc:  0.15%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 660/1164, Acc:  0.15%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 670/1164, Acc:  0.15%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 680/1164, Acc:  0.15%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 690/1164, Acc:  0.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 700/1164, Acc:  0.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 710/1164, Acc:  0.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 720/1164, Acc:  0.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 730/1164, Acc:  0.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 740/1164, Acc:  0.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 750/1164, Acc:  0.13%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 760/1164, Acc:  0.13%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 770/1164, Acc:  0.13%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 780/1164, Acc:  0.13%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 790/1164, Acc:  0.13%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 800/1164, Acc:  0.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 810/1164, Acc:  0.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 820/1164, Acc:  0.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 830/1164, Acc:  0.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 840/1164, Acc:  0.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 850/1164, Acc:  0.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 860/1164, Acc:  0.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 870/1164, Acc:  0.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 880/1164, Acc:  0.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 890/1164, Acc:  0.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 900/1164, Acc:  0.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 910/1164, Acc:  0.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 920/1164, Acc:  0.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 930/1164, Acc:  0.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 940/1164, Acc:  0.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 950/1164, Acc:  0.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 960/1164, Acc:  0.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 970/1164, Acc:  0.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 980/1164, Acc:  0.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 990/1164, Acc:  0.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1000/1164, Acc:  0.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1010/1164, Acc:  0.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1020/1164, Acc:  0.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1030/1164, Acc:  0.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1040/1164, Acc:  0.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1050/1164, Acc:  0.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1060/1164, Acc:  0.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1070/1164, Acc:  0.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1080/1164, Acc:  0.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1090/1164, Acc:  0.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1100/1164, Acc:  0.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1110/1164, Acc:  0.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1120/1164, Acc:  0.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1130/1164, Acc:  0.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1140/1164, Acc:  0.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1150/1164, Acc:  0.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-2000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1160/1164, Acc:  0.09%. 
+  split   overall
+0  full  0.000859
+1   dev  0.000859
+2  test       NaN
+  split  attribute_reasoning  ...  logic_reasoning  relation_reasoning
+0  full             0.005025  ...              0.0                 0.0
+1   dev             0.005025  ...              0.0                 0.0
+2  test                  NaN  ...              NaN                 NaN
+
+[3 rows x 7 columns]
+  split  ...  structuralized_imagetext_understanding
+0  full  ...                                     0.0
+1   dev  ...                                     0.0
+2  test  ...                                     NaN
+
+[3 rows x 21 columns]
+➡️  Running sqa...
+[2025-07-08 17:15:53,533] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:15:53,533] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:15:56,684] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:15:57,119] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Total: 4241, Correct: 1407, Accuracy: 33.18%, IMG-Accuracy: 32.37%
+🧪 Evaluating checkpoint-4000...
+➡️  Running mme...
+[2025-07-08 17:17:54,145] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:17:57,779] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:17:58,936] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:17:58,946] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/onsi/jsun/MobileVLM/dataset/benchmark_data/mme
+=========== Perception ===========
+total score: 984.3420368147258 
+
+	 existence  score: 190.0
+	 count  score: 96.66666666666666
+	 position  score: 51.666666666666664
+	 color  score: 95.0
+	 posters  score: 67.34693877551021
+	 celebrity  score: 74.41176470588235
+	 scene  score: 144.75
+	 landmark  score: 135.25
+	 artwork  score: 79.25
+	 OCR  score: 50.0
+
+
+['./LaVIN', '\tMME metric: 984.34']
+➡️  Running gqa...
+[2025-07-08 17:19:36,106] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:19:36,109] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:19:41,101] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:19:41,339] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Please make sure to use our provided visual features as gqadataset.org for better comparability. We provide both spatial and object-based features trained on GQA train set.
+In particular please avoid using features from https://github.com/peteanderson80/bottom-up-attention since they were trained on images contained in the GQA validation set and thus may give false scores improvement.
+
+Please consider using --consistency to compute consistency scores for entailed questions.
+If you do so, please provide answers to all questions in val_all_questions.json.
+
+Please consider using --grounding to compute attention scores.
+If you do so, please provide attention maps through --attentions.
+
+Loading scene graphs...
+Loading questions...
+Loading choices...
+Loading predictions...
+
+Binary: 55.64%
+Open: 30.29%
+Accuracy: 41.92%
+Validity: 0.00%
+Plausibility: 0.00%
+Distribution: 2.42 (lower is better)
+
+Accuracy / structural type:
+  choose: 54.12% (1129 questions)
+  compare: 43.63% (589 questions)
+  logical: 49.53% (1803 questions)
+  query: 30.29% (6805 questions)
+  verify: 64.43% (2252 questions)
+
+Accuracy / semantic type:
+  attr: 48.67% (5186 questions)
+  cat: 35.86% (1149 questions)
+  global: 42.68% (157 questions)
+  obj: 43.57% (778 questions)
+  rel: 36.38% (5308 questions)
+
+Accuracy / steps number:
+  1: 64.98% (237 questions)
+  2: 38.36% (6395 questions)
+  3: 43.11% (4266 questions)
+  4: 51.20% (793 questions)
+  5: 46.23% (822 questions)
+  6: 63.41% (41 questions)
+  7: 65.00% (20 questions)
+  8: 33.33% (3 questions)
+  9: 100.00% (1 questions)
+
+Accuracy / words number:
+  3: 26.49% (151 questions)
+  4: 42.22% (630 questions)
+  5: 32.87% (1290 questions)
+  6: 41.22% (2074 questions)
+  7: 42.08% (1642 questions)
+  8: 42.70% (1185 questions)
+  9: 41.61% (1281 questions)
+  10: 44.12% (1249 questions)
+  11: 42.76% (994 questions)
+  12: 45.61% (638 questions)
+  13: 47.62% (462 questions)
+  14: 49.57% (345 questions)
+  15: 46.41% (237 questions)
+  16: 51.28% (117 questions)
+  17: 51.06% (94 questions)
+  18: 42.11% (76 questions)
+  19: 51.16% (43 questions)
+  20: 40.62% (32 questions)
+  21: 47.37% (19 questions)
+  22: 33.33% (12 questions)
+  23: 0.00% (4 questions)
+  24: 50.00% (2 questions)
+  25: 100.00% (1 questions)
+➡️  Running textvqa...
+[2025-07-08 17:25:00,122] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:25:00,122] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:25:00,122] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:25:00,126] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+predictions
+Samples: 5000
+Accuracy: 28.72%
+
+➡️  Running pope...
+[2025-07-08 17:27:56,878] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:27:56,878] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:28:01,122] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:28:02,563] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Category: random, # samples: 2910
+TP	FP	TN	FN	
+780	728	727	675
+Accuracy: 0.5178694158075602
+Precision: 0.5172413793103449
+Recall: 0.5360824742268041
+F1 score: 0.5264934188322646
+Yes ratio: 0.518213058419244
+0.526, 0.518, 0.517, 0.536, 0.518
+====================================
+Category: adversarial, # samples: 3000
+TP	FP	TN	FN	
+1293	485	1015	207
+Accuracy: 0.7693333333333333
+Precision: 0.7272215973003374
+Recall: 0.862
+F1 score: 0.788895668090299
+Yes ratio: 0.5926666666666667
+0.789, 0.769, 0.727, 0.862, 0.593
+====================================
+Category: popular, # samples: 3000
+TP	FP	TN	FN	
+1293	431	1069	207
+Accuracy: 0.7873333333333333
+Precision: 0.75
+Recall: 0.862
+F1 score: 0.8021091811414391
+Yes ratio: 0.5746666666666667
+0.802, 0.787, 0.750, 0.862, 0.575
+====================================
+---> avg acc: 0.6915120274914089
+---> avg f1: 0.7058327560213341
+➡️  Running mmbench...
+[2025-07-08 17:31:36,795] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:31:36,795] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:31:39,699] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:31:39,708] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 10/1164, Acc:  10.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 20/1164, Acc:  45.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 30/1164, Acc:  60.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 40/1164, Acc:  65.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 50/1164, Acc:  68.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 60/1164, Acc:  73.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 70/1164, Acc:  67.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 80/1164, Acc:  61.25%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 90/1164, Acc:  56.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 100/1164, Acc:  53.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 110/1164, Acc:  50.91%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 120/1164, Acc:  50.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 130/1164, Acc:  48.46%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 140/1164, Acc:  46.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 150/1164, Acc:  44.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 160/1164, Acc:  41.25%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 170/1164, Acc:  39.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 180/1164, Acc:  39.44%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 190/1164, Acc:  39.47%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 200/1164, Acc:  38.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 210/1164, Acc:  37.62%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 220/1164, Acc:  36.82%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 230/1164, Acc:  36.52%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 240/1164, Acc:  36.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 250/1164, Acc:  36.40%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 260/1164, Acc:  35.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 270/1164, Acc:  36.30%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 280/1164, Acc:  36.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 290/1164, Acc:  37.59%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 300/1164, Acc:  38.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 310/1164, Acc:  37.74%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 320/1164, Acc:  38.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 330/1164, Acc:  37.27%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 340/1164, Acc:  37.35%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 350/1164, Acc:  37.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 360/1164, Acc:  37.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 370/1164, Acc:  38.38%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 380/1164, Acc:  38.42%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 390/1164, Acc:  39.23%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 400/1164, Acc:  40.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 410/1164, Acc:  39.02%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 420/1164, Acc:  38.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 430/1164, Acc:  38.84%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 440/1164, Acc:  40.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 450/1164, Acc:  39.78%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 460/1164, Acc:  39.78%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 470/1164, Acc:  39.57%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 480/1164, Acc:  39.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 490/1164, Acc:  39.39%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 500/1164, Acc:  40.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 510/1164, Acc:  39.61%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 520/1164, Acc:  39.42%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 530/1164, Acc:  39.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 540/1164, Acc:  39.07%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 550/1164, Acc:  39.27%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 560/1164, Acc:  40.36%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 570/1164, Acc:  40.70%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 580/1164, Acc:  41.03%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 590/1164, Acc:  40.51%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 600/1164, Acc:  40.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 610/1164, Acc:  39.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 620/1164, Acc:  39.35%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 630/1164, Acc:  39.21%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 640/1164, Acc:  39.84%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 650/1164, Acc:  40.62%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 660/1164, Acc:  40.15%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 670/1164, Acc:  39.70%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 680/1164, Acc:  39.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 690/1164, Acc:  39.86%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 700/1164, Acc:  39.86%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 710/1164, Acc:  40.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 720/1164, Acc:  40.42%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 730/1164, Acc:  41.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 740/1164, Acc:  41.76%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 750/1164, Acc:  42.40%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 760/1164, Acc:  43.03%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 770/1164, Acc:  43.77%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 780/1164, Acc:  44.49%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 790/1164, Acc:  45.06%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 800/1164, Acc:  45.75%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 810/1164, Acc:  45.68%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 820/1164, Acc:  45.73%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 830/1164, Acc:  46.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 840/1164, Acc:  46.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 850/1164, Acc:  45.88%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 860/1164, Acc:  45.35%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 870/1164, Acc:  44.83%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 880/1164, Acc:  44.32%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 890/1164, Acc:  43.82%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 900/1164, Acc:  43.56%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 910/1164, Acc:  43.63%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 920/1164, Acc:  43.48%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 930/1164, Acc:  43.66%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 940/1164, Acc:  43.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 950/1164, Acc:  42.74%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 960/1164, Acc:  42.29%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 970/1164, Acc:  42.06%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 980/1164, Acc:  42.04%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 990/1164, Acc:  42.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1000/1164, Acc:  42.40%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1010/1164, Acc:  42.38%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1020/1164, Acc:  42.65%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1030/1164, Acc:  42.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1040/1164, Acc:  42.60%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1050/1164, Acc:  43.05%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1060/1164, Acc:  43.49%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1070/1164, Acc:  43.55%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1080/1164, Acc:  43.15%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1090/1164, Acc:  42.75%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1100/1164, Acc:  42.45%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1110/1164, Acc:  42.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1120/1164, Acc:  42.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1130/1164, Acc:  42.39%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1140/1164, Acc:  42.02%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1150/1164, Acc:  42.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-4000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1160/1164, Acc:  41.81%. 
+  split   overall
+0  full  0.416667
+1   dev  0.416667
+2  test       NaN
+  split  attribute_reasoning  ...  logic_reasoning  relation_reasoning
+0  full             0.407035  ...         0.144068            0.365217
+1   dev             0.407035  ...         0.144068            0.365217
+2  test                  NaN  ...              NaN                 NaN
+
+[3 rows x 7 columns]
+  split  ...  structuralized_imagetext_understanding
+0  full  ...                                0.089744
+1   dev  ...                                0.089744
+2  test  ...                                     NaN
+
+[3 rows x 21 columns]
+➡️  Running sqa...
+[2025-07-08 17:35:09,329] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:35:13,812] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:35:14,000] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:35:14,109] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Total: 4241, Correct: 1886, Accuracy: 44.47%, IMG-Accuracy: 47.15%
+🧪 Evaluating checkpoint-6000...
+➡️  Running mme...
+[2025-07-08 17:37:03,496] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:37:03,496] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:37:03,497] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:37:08,121] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/onsi/jsun/MobileVLM/dataset/benchmark_data/mme
+=========== Perception ===========
+total score: 1082.7620048019207 
+
+	 existence  score: 195.0
+	 count  score: 93.33333333333333
+	 position  score: 51.66666666666667
+	 color  score: 123.33333333333333
+	 posters  score: 81.97278911564626
+	 celebrity  score: 99.70588235294117
+	 scene  score: 150.75
+	 landmark  score: 139.0
+	 artwork  score: 98.0
+	 OCR  score: 50.0
+
+
+['./LaVIN', '\tMME metric: 1082.76']
+➡️  Running gqa...
+[2025-07-08 17:39:16,121] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:39:16,124] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:39:21,531] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:39:22,143] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Please make sure to use our provided visual features as gqadataset.org for better comparability. We provide both spatial and object-based features trained on GQA train set.
+In particular please avoid using features from https://github.com/peteanderson80/bottom-up-attention since they were trained on images contained in the GQA validation set and thus may give false scores improvement.
+
+Please consider using --consistency to compute consistency scores for entailed questions.
+If you do so, please provide answers to all questions in val_all_questions.json.
+
+Please consider using --grounding to compute attention scores.
+If you do so, please provide attention maps through --attentions.
+
+Loading scene graphs...
+Loading questions...
+Loading choices...
+Loading predictions...
+
+Binary: 56.80%
+Open: 30.29%
+Accuracy: 42.46%
+Validity: 0.00%
+Plausibility: 0.00%
+Distribution: 2.20 (lower is better)
+
+Accuracy / structural type:
+  choose: 55.36% (1129 questions)
+  compare: 44.31% (589 questions)
+  logical: 52.08% (1803 questions)
+  query: 30.29% (6805 questions)
+  verify: 64.56% (2252 questions)
+
+Accuracy / semantic type:
+  attr: 48.13% (5186 questions)
+  cat: 36.03% (1149 questions)
+  global: 43.95% (157 questions)
+  obj: 46.40% (778 questions)
+  rel: 37.68% (5308 questions)
+
+Accuracy / steps number:
+  1: 63.71% (237 questions)
+  2: 38.89% (6395 questions)
+  3: 43.23% (4266 questions)
+  4: 53.47% (793 questions)
+  5: 47.81% (822 questions)
+  6: 63.41% (41 questions)
+  7: 55.00% (20 questions)
+  8: 100.00% (3 questions)
+  9: 100.00% (1 questions)
+
+Accuracy / words number:
+  3: 26.49% (151 questions)
+  4: 40.95% (630 questions)
+  5: 34.11% (1290 questions)
+  6: 41.22% (2074 questions)
+  7: 42.81% (1642 questions)
+  8: 43.38% (1185 questions)
+  9: 43.01% (1281 questions)
+  10: 44.76% (1249 questions)
+  11: 43.46% (994 questions)
+  12: 46.71% (638 questions)
+  13: 47.40% (462 questions)
+  14: 47.83% (345 questions)
+  15: 48.52% (237 questions)
+  16: 54.70% (117 questions)
+  17: 46.81% (94 questions)
+  18: 39.47% (76 questions)
+  19: 48.84% (43 questions)
+  20: 50.00% (32 questions)
+  21: 42.11% (19 questions)
+  22: 41.67% (12 questions)
+  23: 25.00% (4 questions)
+  24: 50.00% (2 questions)
+  25: 100.00% (1 questions)
+➡️  Running textvqa...
+[2025-07-08 17:44:46,714] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:44:46,716] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:44:46,716] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:44:50,699] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+predictions
+Samples: 5000
+Accuracy: 28.34%
+
+➡️  Running pope...
+[2025-07-08 17:48:01,340] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:48:05,551] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:48:05,945] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:48:05,997] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Category: random, # samples: 2910
+TP	FP	TN	FN	
+744	704	751	711
+Accuracy: 0.5137457044673539
+Precision: 0.5138121546961326
+Recall: 0.511340206185567
+F1 score: 0.5125732001377885
+Yes ratio: 0.49759450171821307
+0.513, 0.514, 0.514, 0.511, 0.498
+====================================
+Category: adversarial, # samples: 3000
+TP	FP	TN	FN	
+1255	539	961	245
+Accuracy: 0.7386666666666667
+Precision: 0.6995540691192865
+Recall: 0.8366666666666667
+F1 score: 0.7619914996964178
+Yes ratio: 0.598
+0.762, 0.739, 0.700, 0.837, 0.598
+====================================
+Category: popular, # samples: 3000
+TP	FP	TN	FN	
+1255	514	986	245
+Accuracy: 0.747
+Precision: 0.70944036178632
+Recall: 0.8366666666666667
+F1 score: 0.7678189048638727
+Yes ratio: 0.5896666666666667
+0.768, 0.747, 0.709, 0.837, 0.590
+====================================
+---> avg acc: 0.6664707903780068
+---> avg f1: 0.6807945348993597
+➡️  Running mmbench...
+[2025-07-08 17:51:48,475] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:51:48,475] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:51:49,580] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:51:53,500] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 10/1164, Acc:  10.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 20/1164, Acc:  55.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 30/1164, Acc:  66.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 40/1164, Acc:  70.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 50/1164, Acc:  72.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 60/1164, Acc:  76.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 70/1164, Acc:  71.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 80/1164, Acc:  66.25%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 90/1164, Acc:  61.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 100/1164, Acc:  57.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 110/1164, Acc:  53.64%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 120/1164, Acc:  51.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 130/1164, Acc:  52.31%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 140/1164, Acc:  50.71%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 150/1164, Acc:  48.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 160/1164, Acc:  45.62%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 170/1164, Acc:  44.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 180/1164, Acc:  43.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 190/1164, Acc:  42.63%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 200/1164, Acc:  41.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 210/1164, Acc:  40.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 220/1164, Acc:  39.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 230/1164, Acc:  38.70%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 240/1164, Acc:  37.08%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 250/1164, Acc:  37.20%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 260/1164, Acc:  35.77%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 270/1164, Acc:  36.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 280/1164, Acc:  37.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 290/1164, Acc:  38.28%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 300/1164, Acc:  39.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 310/1164, Acc:  39.03%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 320/1164, Acc:  39.06%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 330/1164, Acc:  38.18%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 340/1164, Acc:  38.24%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 350/1164, Acc:  38.29%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 360/1164, Acc:  38.61%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 370/1164, Acc:  39.46%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 380/1164, Acc:  39.74%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 390/1164, Acc:  40.51%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 400/1164, Acc:  41.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 410/1164, Acc:  40.49%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 420/1164, Acc:  40.24%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 430/1164, Acc:  41.63%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 440/1164, Acc:  42.27%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 450/1164, Acc:  42.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 460/1164, Acc:  42.39%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 470/1164, Acc:  41.91%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 480/1164, Acc:  41.46%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 490/1164, Acc:  41.63%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 500/1164, Acc:  41.60%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 510/1164, Acc:  41.18%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 520/1164, Acc:  41.15%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 530/1164, Acc:  40.75%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 540/1164, Acc:  40.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 550/1164, Acc:  40.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 560/1164, Acc:  41.07%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 570/1164, Acc:  41.40%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 580/1164, Acc:  42.07%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 590/1164, Acc:  42.54%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 600/1164, Acc:  43.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 610/1164, Acc:  43.44%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 620/1164, Acc:  43.71%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 630/1164, Acc:  43.65%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 640/1164, Acc:  44.53%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 650/1164, Acc:  45.08%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 660/1164, Acc:  44.85%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 670/1164, Acc:  44.93%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 680/1164, Acc:  44.85%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 690/1164, Acc:  45.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 700/1164, Acc:  45.29%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 710/1164, Acc:  45.35%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 720/1164, Acc:  45.56%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 730/1164, Acc:  46.03%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 740/1164, Acc:  46.62%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 750/1164, Acc:  47.20%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 760/1164, Acc:  47.76%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 770/1164, Acc:  48.31%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 780/1164, Acc:  48.97%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 790/1164, Acc:  49.37%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 800/1164, Acc:  50.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 810/1164, Acc:  50.25%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 820/1164, Acc:  50.37%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 830/1164, Acc:  50.60%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 840/1164, Acc:  50.48%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 850/1164, Acc:  50.24%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 860/1164, Acc:  49.88%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 870/1164, Acc:  49.54%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 880/1164, Acc:  48.98%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 890/1164, Acc:  48.54%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 900/1164, Acc:  48.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 910/1164, Acc:  48.24%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 920/1164, Acc:  48.26%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 930/1164, Acc:  48.28%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 940/1164, Acc:  47.77%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 950/1164, Acc:  47.26%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 960/1164, Acc:  46.77%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 970/1164, Acc:  46.60%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 980/1164, Acc:  46.53%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 990/1164, Acc:  46.77%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1000/1164, Acc:  47.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1010/1164, Acc:  47.13%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1020/1164, Acc:  47.35%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1030/1164, Acc:  46.99%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1040/1164, Acc:  47.40%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1050/1164, Acc:  47.71%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1060/1164, Acc:  48.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1070/1164, Acc:  48.13%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1080/1164, Acc:  47.69%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1090/1164, Acc:  47.25%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1100/1164, Acc:  47.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1110/1164, Acc:  47.30%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1120/1164, Acc:  47.32%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1130/1164, Acc:  47.35%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1140/1164, Acc:  47.02%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1150/1164, Acc:  47.04%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-6000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1160/1164, Acc:  46.72%. 
+  split   overall
+0  full  0.465636
+1   dev  0.465636
+2  test       NaN
+  split  attribute_reasoning  ...  logic_reasoning  relation_reasoning
+0  full             0.437186  ...         0.135593            0.365217
+1   dev             0.437186  ...         0.135593            0.365217
+2  test                  NaN  ...              NaN                 NaN
+
+[3 rows x 7 columns]
+  split  ...  structuralized_imagetext_understanding
+0  full  ...                                0.012821
+1   dev  ...                                0.012821
+2  test  ...                                     NaN
+
+[3 rows x 21 columns]
+➡️  Running sqa...
+[2025-07-08 17:55:31,359] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:55:31,359] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:55:31,360] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:55:35,495] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Total: 4241, Correct: 2308, Accuracy: 54.42%, IMG-Accuracy: 55.03%
+🧪 Evaluating checkpoint-8000...
+➡️  Running mme...
+[2025-07-08 17:57:31,053] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:57:31,053] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:57:31,053] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:57:31,088] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/onsi/jsun/MobileVLM/dataset/benchmark_data/mme
+=========== Perception ===========
+total score: 1044.4754901960785 
+
+	 existence  score: 185.0
+	 count  score: 91.66666666666667
+	 position  score: 50.0
+	 color  score: 128.33333333333334
+	 posters  score: 66.66666666666667
+	 celebrity  score: 92.05882352941177
+	 scene  score: 154.5
+	 landmark  score: 141.0
+	 artwork  score: 85.25
+	 OCR  score: 50.0
+
+
+['./LaVIN', '\tMME metric: 1044.48']
+➡️  Running gqa...
+[2025-07-08 17:59:46,698] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:59:46,698] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:59:48,740] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 17:59:49,139] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Please make sure to use our provided visual features as gqadataset.org for better comparability. We provide both spatial and object-based features trained on GQA train set.
+In particular please avoid using features from https://github.com/peteanderson80/bottom-up-attention since they were trained on images contained in the GQA validation set and thus may give false scores improvement.
+
+Please consider using --consistency to compute consistency scores for entailed questions.
+If you do so, please provide answers to all questions in val_all_questions.json.
+
+Please consider using --grounding to compute attention scores.
+If you do so, please provide attention maps through --attentions.
+
+Loading scene graphs...
+Loading questions...
+Loading choices...
+Loading predictions...
+
+Binary: 56.71%
+Open: 30.83%
+Accuracy: 42.71%
+Validity: 0.00%
+Plausibility: 0.00%
+Distribution: 2.58 (lower is better)
+
+Accuracy / structural type:
+  choose: 57.13% (1129 questions)
+  compare: 37.18% (589 questions)
+  logical: 50.25% (1803 questions)
+  query: 30.83% (6805 questions)
+  verify: 66.79% (2252 questions)
+
+Accuracy / semantic type:
+  attr: 48.96% (5186 questions)
+  cat: 37.16% (1149 questions)
+  global: 43.95% (157 questions)
+  obj: 44.60% (778 questions)
+  rel: 37.49% (5308 questions)
+
+Accuracy / steps number:
+  1: 61.18% (237 questions)
+  2: 39.37% (6395 questions)
+  3: 44.19% (4266 questions)
+  4: 51.07% (793 questions)
+  5: 45.50% (822 questions)
+  6: 60.98% (41 questions)
+  7: 85.00% (20 questions)
+  8: 66.67% (3 questions)
+  9: 100.00% (1 questions)
+
+Accuracy / words number:
+  3: 31.13% (151 questions)
+  4: 43.17% (630 questions)
+  5: 34.96% (1290 questions)
+  6: 40.94% (2074 questions)
+  7: 41.96% (1642 questions)
+  8: 44.30% (1185 questions)
+  9: 44.26% (1281 questions)
+  10: 45.64% (1249 questions)
+  11: 43.36% (994 questions)
+  12: 44.98% (638 questions)
+  13: 44.81% (462 questions)
+  14: 47.54% (345 questions)
+  15: 48.10% (237 questions)
+  16: 51.28% (117 questions)
+  17: 52.13% (94 questions)
+  18: 44.74% (76 questions)
+  19: 60.47% (43 questions)
+  20: 43.75% (32 questions)
+  21: 52.63% (19 questions)
+  22: 33.33% (12 questions)
+  23: 0.00% (4 questions)
+  24: 50.00% (2 questions)
+  25: 100.00% (1 questions)
+➡️  Running textvqa...
+[2025-07-08 18:05:17,446] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:05:17,448] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:05:17,448] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:05:17,449] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+predictions
+Samples: 5000
+Accuracy: 30.16%
+
+➡️  Running pope...
+[2025-07-08 18:08:47,689] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:08:49,165] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:08:52,665] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:08:52,755] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Category: random, # samples: 2910
+TP	FP	TN	FN	
+651	630	825	804
+Accuracy: 0.5072164948453608
+Precision: 0.5081967213114754
+Recall: 0.44742268041237115
+F1 score: 0.4758771929824561
+Yes ratio: 0.4402061855670103
+0.476, 0.507, 0.508, 0.447, 0.440
+====================================
+Category: adversarial, # samples: 3000
+TP	FP	TN	FN	
+1193	257	1243	307
+Accuracy: 0.812
+Precision: 0.8227586206896552
+Recall: 0.7953333333333333
+F1 score: 0.8088135593220338
+Yes ratio: 0.48333333333333334
+0.809, 0.812, 0.823, 0.795, 0.483
+====================================
+Category: popular, # samples: 3000
+TP	FP	TN	FN	
+1193	214	1286	307
+Accuracy: 0.8263333333333334
+Precision: 0.8479033404406539
+Recall: 0.7953333333333333
+F1 score: 0.8207774337805298
+Yes ratio: 0.469
+0.821, 0.826, 0.848, 0.795, 0.469
+====================================
+---> avg acc: 0.7151832760595648
+---> avg f1: 0.7018227286950065
+➡️  Running mmbench...
+[2025-07-08 18:12:37,481] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:12:37,481] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:12:37,481] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:12:41,627] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 10/1164, Acc:  20.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 20/1164, Acc:  55.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 30/1164, Acc:  66.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 40/1164, Acc:  70.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 50/1164, Acc:  76.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 60/1164, Acc:  80.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 70/1164, Acc:  74.29%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 80/1164, Acc:  71.25%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 90/1164, Acc:  70.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 100/1164, Acc:  66.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 110/1164, Acc:  64.55%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 120/1164, Acc:  61.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 130/1164, Acc:  60.77%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 140/1164, Acc:  58.57%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 150/1164, Acc:  54.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 160/1164, Acc:  51.88%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 170/1164, Acc:  49.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 180/1164, Acc:  48.89%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 190/1164, Acc:  47.89%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 200/1164, Acc:  47.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 210/1164, Acc:  46.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 220/1164, Acc:  45.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 230/1164, Acc:  44.35%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 240/1164, Acc:  44.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 250/1164, Acc:  43.60%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 260/1164, Acc:  41.92%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 270/1164, Acc:  42.96%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 280/1164, Acc:  43.93%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 290/1164, Acc:  44.83%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 300/1164, Acc:  45.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 310/1164, Acc:  45.48%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 320/1164, Acc:  45.94%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 330/1164, Acc:  44.85%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 340/1164, Acc:  44.71%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 350/1164, Acc:  44.57%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 360/1164, Acc:  44.72%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 370/1164, Acc:  45.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 380/1164, Acc:  45.79%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 390/1164, Acc:  46.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 400/1164, Acc:  47.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 410/1164, Acc:  45.85%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 420/1164, Acc:  45.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 430/1164, Acc:  45.58%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 440/1164, Acc:  46.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 450/1164, Acc:  45.78%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 460/1164, Acc:  45.87%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 470/1164, Acc:  45.32%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 480/1164, Acc:  44.79%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 490/1164, Acc:  45.31%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 500/1164, Acc:  45.40%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 510/1164, Acc:  44.90%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 520/1164, Acc:  44.62%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 530/1164, Acc:  44.53%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 540/1164, Acc:  44.07%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 550/1164, Acc:  44.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 560/1164, Acc:  45.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 570/1164, Acc:  45.44%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 580/1164, Acc:  46.03%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 590/1164, Acc:  45.93%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 600/1164, Acc:  46.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 610/1164, Acc:  46.07%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 620/1164, Acc:  45.65%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 630/1164, Acc:  45.71%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 640/1164, Acc:  46.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 650/1164, Acc:  47.08%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 660/1164, Acc:  46.82%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 670/1164, Acc:  46.57%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 680/1164, Acc:  46.32%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 690/1164, Acc:  46.52%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 700/1164, Acc:  46.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 710/1164, Acc:  46.76%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 720/1164, Acc:  47.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 730/1164, Acc:  47.95%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 740/1164, Acc:  48.65%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 750/1164, Acc:  49.20%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 760/1164, Acc:  49.74%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 770/1164, Acc:  50.39%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 780/1164, Acc:  51.03%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 790/1164, Acc:  51.39%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 800/1164, Acc:  52.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 810/1164, Acc:  52.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 820/1164, Acc:  52.07%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 830/1164, Acc:  52.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 840/1164, Acc:  52.38%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 850/1164, Acc:  52.24%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 860/1164, Acc:  52.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 870/1164, Acc:  51.61%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 880/1164, Acc:  51.02%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 890/1164, Acc:  50.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 900/1164, Acc:  50.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 910/1164, Acc:  50.44%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 920/1164, Acc:  50.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 930/1164, Acc:  50.65%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 940/1164, Acc:  50.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 950/1164, Acc:  49.58%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 960/1164, Acc:  49.06%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 970/1164, Acc:  48.87%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 980/1164, Acc:  48.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 990/1164, Acc:  48.69%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1000/1164, Acc:  48.70%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1010/1164, Acc:  48.81%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1020/1164, Acc:  49.02%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1030/1164, Acc:  48.74%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1040/1164, Acc:  49.13%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1050/1164, Acc:  49.52%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1060/1164, Acc:  49.91%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1070/1164, Acc:  50.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1080/1164, Acc:  49.63%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1090/1164, Acc:  49.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1100/1164, Acc:  48.91%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1110/1164, Acc:  49.01%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1120/1164, Acc:  49.20%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1130/1164, Acc:  49.38%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1140/1164, Acc:  48.95%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1150/1164, Acc:  48.96%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-8000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1160/1164, Acc:  48.79%. 
+  split   overall
+0  full  0.487113
+1   dev  0.487113
+2  test       NaN
+  split  attribute_reasoning  ...  logic_reasoning  relation_reasoning
+0  full             0.437186  ...         0.194915            0.426087
+1   dev             0.437186  ...         0.194915            0.426087
+2  test                  NaN  ...              NaN                 NaN
+
+[3 rows x 7 columns]
+  split  ...  structuralized_imagetext_understanding
+0  full  ...                                0.102564
+1   dev  ...                                0.102564
+2  test  ...                                     NaN
+
+[3 rows x 21 columns]
+➡️  Running sqa...
+[2025-07-08 18:16:24,786] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:16:24,788] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:16:24,788] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:16:24,788] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Total: 4241, Correct: 2312, Accuracy: 54.52%, IMG-Accuracy: 54.83%
+🧪 Evaluating checkpoint-10000...
+➡️  Running mme...
+[2025-07-08 18:18:30,979] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:18:30,979] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:18:31,072] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:18:31,694] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/onsi/jsun/MobileVLM/dataset/benchmark_data/mme
+=========== Perception ===========
+total score: 1035.84093637455 
+
+	 existence  score: 175.0
+	 count  score: 121.66666666666667
+	 position  score: 65.0
+	 color  score: 133.33333333333334
+	 posters  score: 84.69387755102042
+	 celebrity  score: 52.647058823529406
+	 scene  score: 154.0
+	 landmark  score: 76.25
+	 artwork  score: 108.25
+	 OCR  score: 65.0
+
+
+['./LaVIN', '\tMME metric: 1035.84']
+➡️  Running gqa...
+[2025-07-08 18:20:57,759] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:20:57,761] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:20:57,761] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:20:58,310] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Please make sure to use our provided visual features as gqadataset.org for better comparability. We provide both spatial and object-based features trained on GQA train set.
+In particular please avoid using features from https://github.com/peteanderson80/bottom-up-attention since they were trained on images contained in the GQA validation set and thus may give false scores improvement.
+
+Please consider using --consistency to compute consistency scores for entailed questions.
+If you do so, please provide answers to all questions in val_all_questions.json.
+
+Please consider using --grounding to compute attention scores.
+If you do so, please provide attention maps through --attentions.
+
+Loading scene graphs...
+Loading questions...
+Loading choices...
+Loading predictions...
+
+Binary: 55.98%
+Open: 32.34%
+Accuracy: 43.19%
+Validity: 0.00%
+Plausibility: 0.00%
+Distribution: 2.00 (lower is better)
+
+Accuracy / structural type:
+  choose: 57.40% (1129 questions)
+  compare: 50.25% (589 questions)
+  logical: 51.69% (1803 questions)
+  query: 32.34% (6805 questions)
+  verify: 60.21% (2252 questions)
+
+Accuracy / semantic type:
+  attr: 49.65% (5186 questions)
+  cat: 35.94% (1149 questions)
+  global: 45.86% (157 questions)
+  obj: 44.22% (778 questions)
+  rel: 38.23% (5308 questions)
+
+Accuracy / steps number:
+  1: 60.34% (237 questions)
+  2: 39.98% (6395 questions)
+  3: 44.30% (4266 questions)
+  4: 52.71% (793 questions)
+  5: 49.64% (822 questions)
+  6: 31.71% (41 questions)
+  7: 20.00% (20 questions)
+  8: 0.00% (3 questions)
+  9: 0.00% (1 questions)
+
+Accuracy / words number:
+  3: 35.10% (151 questions)
+  4: 42.06% (630 questions)
+  5: 37.05% (1290 questions)
+  6: 42.43% (2074 questions)
+  7: 43.00% (1642 questions)
+  8: 42.87% (1185 questions)
+  9: 45.98% (1281 questions)
+  10: 45.96% (1249 questions)
+  11: 44.06% (994 questions)
+  12: 44.51% (638 questions)
+  13: 45.02% (462 questions)
+  14: 46.96% (345 questions)
+  15: 46.84% (237 questions)
+  16: 43.59% (117 questions)
+  17: 47.87% (94 questions)
+  18: 43.42% (76 questions)
+  19: 53.49% (43 questions)
+  20: 34.38% (32 questions)
+  21: 31.58% (19 questions)
+  22: 58.33% (12 questions)
+  23: 25.00% (4 questions)
+  24: 0.00% (2 questions)
+  25: 0.00% (1 questions)
+➡️  Running textvqa...
+[2025-07-08 18:26:28,206] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:26:28,206] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:26:28,206] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:26:28,206] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+predictions
+Samples: 5000
+Accuracy: 30.56%
+
+➡️  Running pope...
+[2025-07-08 18:30:15,371] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:30:15,371] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:30:15,371] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:30:15,374] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Category: random, # samples: 2910
+TP	FP	TN	FN	
+578	556	899	877
+Accuracy: 0.5075601374570446
+Precision: 0.5097001763668431
+Recall: 0.3972508591065292
+F1 score: 0.44650444186944765
+Yes ratio: 0.38969072164948454
+0.447, 0.508, 0.510, 0.397, 0.390
+====================================
+Category: adversarial, # samples: 3000
+TP	FP	TN	FN	
+1095	150	1350	405
+Accuracy: 0.815
+Precision: 0.8795180722891566
+Recall: 0.73
+F1 score: 0.7978142076502732
+Yes ratio: 0.415
+0.798, 0.815, 0.880, 0.730, 0.415
+====================================
+Category: popular, # samples: 3000
+TP	FP	TN	FN	
+1095	94	1406	405
+Accuracy: 0.8336666666666667
+Precision: 0.9209419680403701
+Recall: 0.73
+F1 score: 0.8144291558200074
+Yes ratio: 0.3963333333333333
+0.814, 0.834, 0.921, 0.730, 0.396
+====================================
+---> avg acc: 0.7187422680412371
+---> avg f1: 0.6862492684465762
+➡️  Running mmbench...
+[2025-07-08 18:34:03,185] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:34:03,185] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:34:03,186] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:34:04,440] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 10/1164, Acc:  10.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 20/1164, Acc:  50.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 30/1164, Acc:  63.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 40/1164, Acc:  72.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 50/1164, Acc:  72.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 60/1164, Acc:  76.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 70/1164, Acc:  71.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 80/1164, Acc:  65.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 90/1164, Acc:  61.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 100/1164, Acc:  57.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 110/1164, Acc:  55.45%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 120/1164, Acc:  52.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 130/1164, Acc:  52.31%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 140/1164, Acc:  49.29%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 150/1164, Acc:  46.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 160/1164, Acc:  43.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 170/1164, Acc:  41.18%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 180/1164, Acc:  41.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 190/1164, Acc:  40.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 200/1164, Acc:  39.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 210/1164, Acc:  38.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 220/1164, Acc:  37.73%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 230/1164, Acc:  37.39%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 240/1164, Acc:  37.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 250/1164, Acc:  37.60%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 260/1164, Acc:  36.15%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 270/1164, Acc:  37.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 280/1164, Acc:  38.57%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 290/1164, Acc:  39.66%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 300/1164, Acc:  40.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 310/1164, Acc:  40.32%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 320/1164, Acc:  40.62%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 330/1164, Acc:  39.70%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 340/1164, Acc:  39.71%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 350/1164, Acc:  40.29%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 360/1164, Acc:  40.56%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 370/1164, Acc:  41.08%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 380/1164, Acc:  41.32%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 390/1164, Acc:  42.31%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 400/1164, Acc:  43.25%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 410/1164, Acc:  42.20%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 420/1164, Acc:  41.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 430/1164, Acc:  41.86%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 440/1164, Acc:  42.73%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 450/1164, Acc:  42.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 460/1164, Acc:  42.83%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 470/1164, Acc:  42.13%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 480/1164, Acc:  41.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 490/1164, Acc:  41.84%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 500/1164, Acc:  42.20%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 510/1164, Acc:  41.96%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 520/1164, Acc:  41.73%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 530/1164, Acc:  41.32%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 540/1164, Acc:  40.74%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 550/1164, Acc:  40.73%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 560/1164, Acc:  41.79%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 570/1164, Acc:  42.81%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 580/1164, Acc:  43.28%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 590/1164, Acc:  43.73%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 600/1164, Acc:  44.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 610/1164, Acc:  44.26%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 620/1164, Acc:  44.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 630/1164, Acc:  43.81%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 640/1164, Acc:  44.53%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 650/1164, Acc:  45.23%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 660/1164, Acc:  44.85%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 670/1164, Acc:  44.48%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 680/1164, Acc:  44.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 690/1164, Acc:  44.06%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 700/1164, Acc:  44.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 710/1164, Acc:  44.08%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 720/1164, Acc:  44.58%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 730/1164, Acc:  45.34%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 740/1164, Acc:  45.81%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 750/1164, Acc:  46.40%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 760/1164, Acc:  46.97%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 770/1164, Acc:  47.66%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 780/1164, Acc:  48.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 790/1164, Acc:  48.86%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 800/1164, Acc:  49.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 810/1164, Acc:  49.63%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 820/1164, Acc:  49.76%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 830/1164, Acc:  50.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 840/1164, Acc:  50.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 850/1164, Acc:  50.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 860/1164, Acc:  49.53%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 870/1164, Acc:  49.08%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 880/1164, Acc:  48.52%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 890/1164, Acc:  48.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 900/1164, Acc:  47.78%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 910/1164, Acc:  47.80%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 920/1164, Acc:  47.93%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 930/1164, Acc:  48.06%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 940/1164, Acc:  47.55%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 950/1164, Acc:  47.05%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 960/1164, Acc:  46.56%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 970/1164, Acc:  46.29%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 980/1164, Acc:  46.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 990/1164, Acc:  46.46%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1000/1164, Acc:  46.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1010/1164, Acc:  46.53%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1020/1164, Acc:  46.76%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1030/1164, Acc:  46.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1040/1164, Acc:  46.92%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1050/1164, Acc:  47.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1060/1164, Acc:  47.83%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1070/1164, Acc:  47.85%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1080/1164, Acc:  47.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1090/1164, Acc:  47.25%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1100/1164, Acc:  46.91%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1110/1164, Acc:  46.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1120/1164, Acc:  46.70%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1130/1164, Acc:  46.55%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1140/1164, Acc:  46.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1150/1164, Acc:  46.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-10000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1160/1164, Acc:  45.86%. 
+  split   overall
+0  full  0.457904
+1   dev  0.457904
+2  test       NaN
+  split  attribute_reasoning  ...  logic_reasoning  relation_reasoning
+0  full              0.41206  ...         0.152542            0.356522
+1   dev              0.41206  ...         0.152542            0.356522
+2  test                  NaN  ...              NaN                 NaN
+
+[3 rows x 7 columns]
+  split  ...  structuralized_imagetext_understanding
+0  full  ...                                0.102564
+1   dev  ...                                0.102564
+2  test  ...                                     NaN
+
+[3 rows x 21 columns]
+➡️  Running sqa...
+[2025-07-08 18:37:35,617] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:37:35,617] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:37:35,618] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:37:40,704] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Total: 4241, Correct: 2289, Accuracy: 53.97%, IMG-Accuracy: 56.17%
+🧪 Evaluating checkpoint-12000...
+➡️  Running mme...
+[2025-07-08 18:39:28,985] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:39:28,985] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:39:32,747] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:39:33,346] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/onsi/jsun/MobileVLM/dataset/benchmark_data/mme
+=========== Perception ===========
+total score: 1112.3882553021208 
+
+	 existence  score: 180.0
+	 count  score: 115.0
+	 position  score: 61.66666666666667
+	 color  score: 145.0
+	 posters  score: 105.44217687074831
+	 celebrity  score: 63.529411764705884
+	 scene  score: 161.0
+	 landmark  score: 119.0
+	 artwork  score: 96.75
+	 OCR  score: 65.0
+
+
+['./LaVIN', '\tMME metric: 1112.39']
+➡️  Running gqa...
+[2025-07-08 18:41:41,075] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:41:41,075] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:41:41,077] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:41:41,077] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Please make sure to use our provided visual features as gqadataset.org for better comparability. We provide both spatial and object-based features trained on GQA train set.
+In particular please avoid using features from https://github.com/peteanderson80/bottom-up-attention since they were trained on images contained in the GQA validation set and thus may give false scores improvement.
+
+Please consider using --consistency to compute consistency scores for entailed questions.
+If you do so, please provide answers to all questions in val_all_questions.json.
+
+Please consider using --grounding to compute attention scores.
+If you do so, please provide attention maps through --attentions.
+
+Loading scene graphs...
+Loading questions...
+Loading choices...
+Loading predictions...
+
+Binary: 57.65%
+Open: 33.92%
+Accuracy: 44.81%
+Validity: 0.00%
+Plausibility: 0.00%
+Distribution: 1.92 (lower is better)
+
+Accuracy / structural type:
+  choose: 58.81% (1129 questions)
+  compare: 52.29% (589 questions)
+  logical: 53.41% (1803 questions)
+  query: 33.92% (6805 questions)
+  verify: 61.86% (2252 questions)
+
+Accuracy / semantic type:
+  attr: 52.10% (5186 questions)
+  cat: 38.03% (1149 questions)
+  global: 47.77% (157 questions)
+  obj: 47.81% (778 questions)
+  rel: 38.62% (5308 questions)
+
+Accuracy / steps number:
+  1: 63.29% (237 questions)
+  2: 41.33% (6395 questions)
+  3: 46.34% (4266 questions)
+  4: 53.22% (793 questions)
+  5: 51.09% (822 questions)
+  6: 39.02% (41 questions)
+  7: 35.00% (20 questions)
+  8: 0.00% (3 questions)
+  9: 100.00% (1 questions)
+
+Accuracy / words number:
+  3: 34.44% (151 questions)
+  4: 42.70% (630 questions)
+  5: 38.53% (1290 questions)
+  6: 44.41% (2074 questions)
+  7: 45.19% (1642 questions)
+  8: 44.73% (1185 questions)
+  9: 45.67% (1281 questions)
+  10: 47.32% (1249 questions)
+  11: 46.18% (994 questions)
+  12: 50.94% (638 questions)
+  13: 48.05% (462 questions)
+  14: 44.93% (345 questions)
+  15: 47.68% (237 questions)
+  16: 42.74% (117 questions)
+  17: 47.87% (94 questions)
+  18: 38.16% (76 questions)
+  19: 48.84% (43 questions)
+  20: 56.25% (32 questions)
+  21: 36.84% (19 questions)
+  22: 33.33% (12 questions)
+  23: 25.00% (4 questions)
+  24: 0.00% (2 questions)
+  25: 0.00% (1 questions)
+➡️  Running textvqa...
+[2025-07-08 18:47:10,385] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:47:10,385] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:47:10,385] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:47:10,387] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+predictions
+Samples: 5000
+Accuracy: 32.45%
+
+➡️  Running pope...
+[2025-07-08 18:50:26,956] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:50:26,956] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:50:26,956] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:50:31,586] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Category: random, # samples: 2910
+TP	FP	TN	FN	
+580	570	885	875
+Accuracy: 0.5034364261168385
+Precision: 0.5043478260869565
+Recall: 0.39862542955326463
+F1 score: 0.4452975047984645
+Yes ratio: 0.3951890034364261
+0.445, 0.503, 0.504, 0.399, 0.395
+====================================
+Category: adversarial, # samples: 3000
+TP	FP	TN	FN	
+1100	154	1346	400
+Accuracy: 0.8153333333333334
+Precision: 0.8771929824561403
+Recall: 0.7333333333333333
+F1 score: 0.7988380537400145
+Yes ratio: 0.418
+0.799, 0.815, 0.877, 0.733, 0.418
+====================================
+Category: popular, # samples: 3000
+TP	FP	TN	FN	
+1100	95	1405	400
+Accuracy: 0.835
+Precision: 0.9205020920502092
+Recall: 0.7333333333333333
+F1 score: 0.8163265306122447
+Yes ratio: 0.3983333333333333
+0.816, 0.835, 0.921, 0.733, 0.398
+====================================
+---> avg acc: 0.7179232531500572
+---> avg f1: 0.6868206963835745
+➡️  Running mmbench...
+[2025-07-08 18:54:15,916] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:54:15,916] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:54:18,185] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:54:20,357] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 10/1164, Acc:  20.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 20/1164, Acc:  60.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 30/1164, Acc:  70.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 40/1164, Acc:  77.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 50/1164, Acc:  80.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 60/1164, Acc:  83.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 70/1164, Acc:  77.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 80/1164, Acc:  72.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 90/1164, Acc:  71.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 100/1164, Acc:  66.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 110/1164, Acc:  63.64%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 120/1164, Acc:  60.83%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 130/1164, Acc:  60.77%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 140/1164, Acc:  58.57%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 150/1164, Acc:  57.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 160/1164, Acc:  55.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 170/1164, Acc:  52.35%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 180/1164, Acc:  52.78%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 190/1164, Acc:  51.58%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 200/1164, Acc:  50.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 210/1164, Acc:  49.05%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 220/1164, Acc:  48.64%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 230/1164, Acc:  48.26%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 240/1164, Acc:  47.92%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 250/1164, Acc:  48.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 260/1164, Acc:  46.15%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 270/1164, Acc:  46.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 280/1164, Acc:  47.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 290/1164, Acc:  47.93%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 300/1164, Acc:  48.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 310/1164, Acc:  48.06%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 320/1164, Acc:  48.75%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 330/1164, Acc:  48.18%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 340/1164, Acc:  48.24%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 350/1164, Acc:  48.57%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 360/1164, Acc:  48.89%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 370/1164, Acc:  49.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 380/1164, Acc:  49.21%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 390/1164, Acc:  49.74%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 400/1164, Acc:  50.75%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 410/1164, Acc:  49.51%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 420/1164, Acc:  48.81%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 430/1164, Acc:  49.30%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 440/1164, Acc:  49.77%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 450/1164, Acc:  49.78%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 460/1164, Acc:  50.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 470/1164, Acc:  49.79%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 480/1164, Acc:  49.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 490/1164, Acc:  49.39%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 500/1164, Acc:  49.40%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 510/1164, Acc:  49.02%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 520/1164, Acc:  48.65%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 530/1164, Acc:  48.49%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 540/1164, Acc:  48.15%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 550/1164, Acc:  48.18%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 560/1164, Acc:  49.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 570/1164, Acc:  49.82%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 580/1164, Acc:  50.52%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 590/1164, Acc:  50.85%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 600/1164, Acc:  51.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 610/1164, Acc:  51.48%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 620/1164, Acc:  51.61%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 630/1164, Acc:  51.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 640/1164, Acc:  52.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 650/1164, Acc:  52.46%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 660/1164, Acc:  51.97%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 670/1164, Acc:  51.49%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 680/1164, Acc:  51.18%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 690/1164, Acc:  51.45%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 700/1164, Acc:  51.71%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 710/1164, Acc:  51.83%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 720/1164, Acc:  52.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 730/1164, Acc:  52.88%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 740/1164, Acc:  53.24%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 750/1164, Acc:  53.73%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 760/1164, Acc:  54.21%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 770/1164, Acc:  54.81%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 780/1164, Acc:  55.38%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 790/1164, Acc:  55.82%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 800/1164, Acc:  56.38%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 810/1164, Acc:  56.42%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 820/1164, Acc:  56.59%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 830/1164, Acc:  56.87%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 840/1164, Acc:  56.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 850/1164, Acc:  56.59%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 860/1164, Acc:  56.63%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 870/1164, Acc:  56.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 880/1164, Acc:  55.45%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 890/1164, Acc:  55.28%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 900/1164, Acc:  55.11%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 910/1164, Acc:  55.05%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 920/1164, Acc:  55.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 930/1164, Acc:  55.59%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 940/1164, Acc:  55.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 950/1164, Acc:  54.42%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 960/1164, Acc:  53.85%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 970/1164, Acc:  53.51%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 980/1164, Acc:  53.37%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 990/1164, Acc:  53.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1000/1164, Acc:  53.40%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1010/1164, Acc:  53.56%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1020/1164, Acc:  53.73%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1030/1164, Acc:  53.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1040/1164, Acc:  53.94%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1050/1164, Acc:  54.29%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1060/1164, Acc:  54.72%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1070/1164, Acc:  54.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1080/1164, Acc:  54.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1090/1164, Acc:  53.85%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1100/1164, Acc:  53.45%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1110/1164, Acc:  53.69%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1120/1164, Acc:  53.84%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1130/1164, Acc:  54.16%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1140/1164, Acc:  53.86%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1150/1164, Acc:  53.74%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-12000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1160/1164, Acc:  53.53%. 
+  split   overall
+0  full  0.534364
+1   dev  0.534364
+2  test       NaN
+  split  attribute_reasoning  ...  logic_reasoning  relation_reasoning
+0  full             0.507538  ...         0.177966            0.434783
+1   dev             0.507538  ...         0.177966            0.434783
+2  test                  NaN  ...              NaN                 NaN
+
+[3 rows x 7 columns]
+  split  ...  structuralized_imagetext_understanding
+0  full  ...                                0.128205
+1   dev  ...                                0.128205
+2  test  ...                                     NaN
+
+[3 rows x 21 columns]
+➡️  Running sqa...
+[2025-07-08 18:57:57,252] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:57:57,253] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:57:57,254] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:57:57,314] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Total: 4241, Correct: 2340, Accuracy: 55.18%, IMG-Accuracy: 56.72%
+🧪 Evaluating checkpoint-14000...
+➡️  Running mme...
+[2025-07-08 18:59:55,299] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:59:55,301] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 18:59:55,302] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:00:00,366] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/onsi/jsun/MobileVLM/dataset/benchmark_data/mme
+=========== Perception ===========
+total score: 1130.0685274109644 
+
+	 existence  score: 190.0
+	 count  score: 110.0
+	 position  score: 61.66666666666667
+	 color  score: 130.0
+	 posters  score: 106.12244897959184
+	 celebrity  score: 88.52941176470588
+	 scene  score: 161.0
+	 landmark  score: 133.0
+	 artwork  score: 92.25
+	 OCR  score: 57.5
+
+
+['./LaVIN', '\tMME metric: 1130.07']
+➡️  Running gqa...
+[2025-07-08 19:02:15,312] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:02:15,312] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:02:16,538] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:02:16,802] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Please make sure to use our provided visual features as gqadataset.org for better comparability. We provide both spatial and object-based features trained on GQA train set.
+In particular please avoid using features from https://github.com/peteanderson80/bottom-up-attention since they were trained on images contained in the GQA validation set and thus may give false scores improvement.
+
+Please consider using --consistency to compute consistency scores for entailed questions.
+If you do so, please provide answers to all questions in val_all_questions.json.
+
+Please consider using --grounding to compute attention scores.
+If you do so, please provide attention maps through --attentions.
+
+Loading scene graphs...
+Loading questions...
+Loading choices...
+Loading predictions...
+
+Binary: 58.36%
+Open: 33.86%
+Accuracy: 45.10%
+Validity: 0.00%
+Plausibility: 0.00%
+Distribution: 2.06 (lower is better)
+
+Accuracy / structural type:
+  choose: 58.81% (1129 questions)
+  compare: 49.75% (589 questions)
+  logical: 51.53% (1803 questions)
+  query: 33.86% (6805 questions)
+  verify: 65.85% (2252 questions)
+
+Accuracy / semantic type:
+  attr: 52.02% (5186 questions)
+  cat: 38.82% (1149 questions)
+  global: 43.95% (157 questions)
+  obj: 43.06% (778 questions)
+  rel: 40.03% (5308 questions)
+
+Accuracy / steps number:
+  1: 64.98% (237 questions)
+  2: 42.05% (6395 questions)
+  3: 46.18% (4266 questions)
+  4: 55.11% (793 questions)
+  5: 47.81% (822 questions)
+  6: 46.34% (41 questions)
+  7: 50.00% (20 questions)
+  8: 0.00% (3 questions)
+  9: 100.00% (1 questions)
+
+Accuracy / words number:
+  3: 33.11% (151 questions)
+  4: 42.54% (630 questions)
+  5: 37.83% (1290 questions)
+  6: 43.73% (2074 questions)
+  7: 45.86% (1642 questions)
+  8: 45.23% (1185 questions)
+  9: 45.98% (1281 questions)
+  10: 47.16% (1249 questions)
+  11: 46.98% (994 questions)
+  12: 51.88% (638 questions)
+  13: 49.13% (462 questions)
+  14: 47.25% (345 questions)
+  15: 48.95% (237 questions)
+  16: 50.43% (117 questions)
+  17: 51.06% (94 questions)
+  18: 39.47% (76 questions)
+  19: 51.16% (43 questions)
+  20: 50.00% (32 questions)
+  21: 47.37% (19 questions)
+  22: 33.33% (12 questions)
+  23: 25.00% (4 questions)
+  24: 0.00% (2 questions)
+  25: 0.00% (1 questions)
+➡️  Running textvqa...
+[2025-07-08 19:07:44,314] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:07:44,315] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:07:47,612] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:07:48,110] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+predictions
+Samples: 5000
+Accuracy: 33.19%
+
+➡️  Running pope...
+[2025-07-08 19:11:00,162] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:11:00,162] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:11:00,165] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:11:00,165] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Category: random, # samples: 2910
+TP	FP	TN	FN	
+623	596	859	832
+Accuracy: 0.5092783505154639
+Precision: 0.5110746513535686
+Recall: 0.4281786941580756
+F1 score: 0.4659685863874346
+Yes ratio: 0.4189003436426117
+0.466, 0.509, 0.511, 0.428, 0.419
+====================================
+Category: adversarial, # samples: 3000
+TP	FP	TN	FN	
+1157	198	1302	343
+Accuracy: 0.8196666666666667
+Precision: 0.8538745387453874
+Recall: 0.7713333333333333
+F1 score: 0.8105078809106829
+Yes ratio: 0.45166666666666666
+0.811, 0.820, 0.854, 0.771, 0.452
+====================================
+Category: popular, # samples: 3000
+TP	FP	TN	FN	
+1157	121	1379	343
+Accuracy: 0.8453333333333334
+Precision: 0.905320813771518
+Recall: 0.7713333333333333
+F1 score: 0.8329733621310296
+Yes ratio: 0.426
+0.833, 0.845, 0.905, 0.771, 0.426
+====================================
+---> avg acc: 0.7247594501718213
+---> avg f1: 0.7031499431430491
+➡️  Running mmbench...
+[2025-07-08 19:14:48,782] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:14:48,783] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:14:48,785] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:14:52,774] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 10/1164, Acc:  20.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 20/1164, Acc:  60.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 30/1164, Acc:  70.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 40/1164, Acc:  77.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 50/1164, Acc:  80.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 60/1164, Acc:  83.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 70/1164, Acc:  77.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 80/1164, Acc:  73.75%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 90/1164, Acc:  73.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 100/1164, Acc:  69.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 110/1164, Acc:  67.27%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 120/1164, Acc:  64.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 130/1164, Acc:  64.62%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 140/1164, Acc:  62.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 150/1164, Acc:  61.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 160/1164, Acc:  59.38%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 170/1164, Acc:  56.47%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 180/1164, Acc:  55.56%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 190/1164, Acc:  54.21%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 200/1164, Acc:  53.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 210/1164, Acc:  51.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 220/1164, Acc:  51.36%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 230/1164, Acc:  51.30%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 240/1164, Acc:  50.83%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 250/1164, Acc:  50.80%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 260/1164, Acc:  48.85%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 270/1164, Acc:  50.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 280/1164, Acc:  51.07%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 290/1164, Acc:  51.72%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 300/1164, Acc:  52.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 310/1164, Acc:  51.61%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 320/1164, Acc:  52.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 330/1164, Acc:  51.21%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 340/1164, Acc:  51.47%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 350/1164, Acc:  51.71%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 360/1164, Acc:  51.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 370/1164, Acc:  51.89%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 380/1164, Acc:  51.84%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 390/1164, Acc:  52.56%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 400/1164, Acc:  53.25%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 410/1164, Acc:  51.95%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 420/1164, Acc:  50.95%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 430/1164, Acc:  51.16%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 440/1164, Acc:  51.59%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 450/1164, Acc:  51.56%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 460/1164, Acc:  51.74%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 470/1164, Acc:  51.28%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 480/1164, Acc:  50.62%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 490/1164, Acc:  51.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 500/1164, Acc:  51.20%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 510/1164, Acc:  50.78%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 520/1164, Acc:  50.38%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 530/1164, Acc:  50.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 540/1164, Acc:  50.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 550/1164, Acc:  50.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 560/1164, Acc:  50.89%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 570/1164, Acc:  51.75%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 580/1164, Acc:  52.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 590/1164, Acc:  52.71%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 600/1164, Acc:  53.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 610/1164, Acc:  53.28%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 620/1164, Acc:  53.39%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 630/1164, Acc:  53.17%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 640/1164, Acc:  53.91%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 650/1164, Acc:  54.31%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 660/1164, Acc:  53.94%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 670/1164, Acc:  53.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 680/1164, Acc:  53.09%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 690/1164, Acc:  53.19%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 700/1164, Acc:  53.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 710/1164, Acc:  53.38%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 720/1164, Acc:  53.89%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 730/1164, Acc:  54.52%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 740/1164, Acc:  54.86%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 750/1164, Acc:  55.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 760/1164, Acc:  55.79%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 770/1164, Acc:  56.36%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 780/1164, Acc:  56.92%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 790/1164, Acc:  57.34%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 800/1164, Acc:  57.88%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 810/1164, Acc:  57.90%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 820/1164, Acc:  58.05%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 830/1164, Acc:  58.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 840/1164, Acc:  58.33%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 850/1164, Acc:  58.12%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 860/1164, Acc:  58.14%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 870/1164, Acc:  57.59%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 880/1164, Acc:  56.93%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 890/1164, Acc:  56.63%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 900/1164, Acc:  56.22%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 910/1164, Acc:  56.26%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 920/1164, Acc:  56.41%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 930/1164, Acc:  56.67%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 940/1164, Acc:  56.06%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 950/1164, Acc:  55.47%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 960/1164, Acc:  54.90%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 970/1164, Acc:  54.54%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 980/1164, Acc:  54.49%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 990/1164, Acc:  54.55%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1000/1164, Acc:  54.50%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1010/1164, Acc:  54.65%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1020/1164, Acc:  54.90%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1030/1164, Acc:  54.66%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1040/1164, Acc:  55.10%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1050/1164, Acc:  55.43%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1060/1164, Acc:  55.85%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1070/1164, Acc:  55.89%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1080/1164, Acc:  55.37%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1090/1164, Acc:  54.86%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1100/1164, Acc:  54.55%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1110/1164, Acc:  54.86%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1120/1164, Acc:  55.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1130/1164, Acc:  55.31%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1140/1164, Acc:  55.00%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1150/1164, Acc:  54.87%. 
+Evaluating /home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-14000/mmbench/mmbench_dev_en_20231003/predictions.xlsx: 1160/1164, Acc:  54.66%. 
+  split   overall
+0  full  0.545533
+1   dev  0.545533
+2  test       NaN
+  split  attribute_reasoning  ...  logic_reasoning  relation_reasoning
+0  full             0.537688  ...         0.186441            0.452174
+1   dev             0.537688  ...         0.186441            0.452174
+2  test                  NaN  ...              NaN                 NaN
+
+[3 rows x 7 columns]
+  split  ...  structuralized_imagetext_understanding
+0  full  ...                                0.115385
+1   dev  ...                                0.115385
+2  test  ...                                     NaN
+
+[3 rows x 21 columns]
+➡️  Running sqa...
+[2025-07-08 19:18:25,587] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:18:25,587] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:18:27,903] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-08 19:18:28,963] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Total: 4241, Correct: 2385, Accuracy: 56.24%, IMG-Accuracy: 57.16%

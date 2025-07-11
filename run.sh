@@ -13,8 +13,8 @@ case ${TASK} in
         mkdir -p ${OUTPUT_DIR}
         LANGUAGE_MODEL=$3
         VISION_MODEL=$4
-        # bash run.sh ${ARCH} pretrain ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
-        bash run.sh ${ARCH} finetune ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
+        bash run.sh ${ARCH} pretrain ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
+        # bash run.sh ${ARCH} finetune ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
         # bash run.sh ${ARCH} test ${OUTPUT_DIR}/mobilevlm_v2-1.pretrain
         #bash run.sh ${ARCH} test ${OUTPUT_DIR}/mobilevlm_v2-2.finetune
     ;;
@@ -25,13 +25,13 @@ case ${TASK} in
         VISION_MODEL=$4
         OUTPUT_DIR=$5
         MASTER_PORT=${MASTER_PORT:-29500}
-        OUTPUT_DIR_PT=${OUTPUT_DIR}/mobilevlm_v2-1.pretrain
+        OUTPUT_DIR_PT=${OUTPUT_DIR}/mobilevlm_v2-1.pretrain-1246k
         mkdir -p ${OUTPUT_DIR_PT}
         deepspeed --master_port ${MASTER_PORT} mobilevlm/train/train_mem.py \
             --deepspeed scripts/deepspeed/zero2.json \
             --model_name_or_path ${LANGUAGE_MODEL} \
             --version plain \
-            --data_path dataset/pretrain_data/filtered_llava_coco_samples_676k.json \
+            --data_path dataset/pretrain_data/share-captioner_coco_lcs_sam_1246k_1107.json \
             --image_folder dataset/pretrain_data \
             --vision_tower ${VISION_MODEL} \
             --vision_tower_type clip \
@@ -71,15 +71,15 @@ case ${TASK} in
         VISION_MODEL=$4
         OUTPUT_DIR=$5
         MASTER_PORT=${MASTER_PORT:-29500}
-        # OUTPUT_DIR_PT=${OUTPUT_DIR}/mobilevlm_v2-1.pretrain
-        OUTPUT_DIR_PT=outputs/mobilevlm_v2_1.7b_20250629_222342/mobilevlm_v2-1.pretrain
-        OUTPUT_DIR_FT=${OUTPUT_DIR}/mobilevlm_v2-2.finetune-1000steps
+        OUTPUT_DIR_PT=${OUTPUT_DIR}/mobilevlm_v2-1.pretrain-1246k
+        # OUTPUT_DIR_PT=outputs/mobilevlm_v2_1.7b_20250629_222342/mobilevlm_v2-1.pretrain
+        OUTPUT_DIR_FT=${OUTPUT_DIR}/mobilevlm_v2-2.finetune-1584K
         mkdir -p ${OUTPUT_DIR_FT}
         deepspeed --master_port ${MASTER_PORT} mobilevlm/train/train_mem.py \
             --deepspeed scripts/deepspeed/zero1.json \
             --model_name_or_path ${OUTPUT_DIR_PT} \
             --version v1 \
-            --data_path dataset/finetune_data/filtered_coco_images_990k.json \
+            --data_path dataset/finetune_data/filtered_except_SBU_images_1584k.json \
             --image_folder dataset/finetune_data \
             --vision_tower ${VISION_MODEL} \
             --vision_tower_type clip \
@@ -97,7 +97,7 @@ case ${TASK} in
             --gradient_accumulation_steps 1 \
             --evaluation_strategy "no" \
             --save_strategy "steps" \
-            --save_steps 1000 \
+            --save_steps 2000 \
             --learning_rate 4e-5 \
             --weight_decay 0. \
             --warmup_ratio 0.03 \
