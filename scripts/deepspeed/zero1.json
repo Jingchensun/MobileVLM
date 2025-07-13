@@ -18,5 +18,6 @@
         "overlap_comm": false,
         "contiguous_gradients": true,
         "reduce_bucket_size": "auto"
-    }
-} 
+    },
+    "zero_force_ds_cpu_optimizer": true
+}

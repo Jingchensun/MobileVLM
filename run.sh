@@ -13,9 +13,9 @@ case ${TASK} in
         mkdir -p ${OUTPUT_DIR}
         LANGUAGE_MODEL=$3
         VISION_MODEL=$4
-        bash run.sh ${ARCH} pretrain ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
-        # bash run.sh ${ARCH} finetune ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
-        # bash run.sh ${ARCH} test ${OUTPUT_DIR}/mobilevlm_v2-1.pretrain
+        # bash run.sh ${ARCH} pretrain ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
+        bash run.sh ${ARCH} finetune ${LANGUAGE_MODEL} ${VISION_MODEL} ${OUTPUT_DIR}
+        bash run.sh ${ARCH} test ${OUTPUT_DIR}/mobilevlm_v2-2.finetune-1584K
         #bash run.sh ${ARCH} test ${OUTPUT_DIR}/mobilevlm_v2-2.finetune
     ;;
     "pretrain")
@@ -48,7 +48,7 @@ case ${TASK} in
             --gradient_accumulation_steps 1 \
             --evaluation_strategy "no" \
             --save_strategy "steps" \
-            --save_steps 24000 \
+            --save_steps 6000 \
             --save_total_limit 1 \
             --learning_rate 2e-5 \
             --weight_decay 0. \
@@ -71,12 +71,12 @@ case ${TASK} in
         VISION_MODEL=$4
         OUTPUT_DIR=$5
         MASTER_PORT=${MASTER_PORT:-29500}
-        OUTPUT_DIR_PT=${OUTPUT_DIR}/mobilevlm_v2-1.pretrain-1246k
+        OUTPUT_DIR_PT=outputs/mobilevlm_v2-1.pretrain-1246k
         # OUTPUT_DIR_PT=outputs/mobilevlm_v2_1.7b_20250629_222342/mobilevlm_v2-1.pretrain
-        OUTPUT_DIR_FT=${OUTPUT_DIR}/mobilevlm_v2-2.finetune-1584K
+        OUTPUT_DIR_FT=outputs/mobilevlm_v2-2.finetune-1584K
         mkdir -p ${OUTPUT_DIR_FT}
         deepspeed --master_port ${MASTER_PORT} mobilevlm/train/train_mem.py \
-            --deepspeed scripts/deepspeed/zero1.json \
+            --deepspeed scripts/deepspeed/zero2.json \
             --model_name_or_path ${OUTPUT_DIR_PT} \
             --version v1 \
             --data_path dataset/finetune_data/filtered_except_SBU_images_1584k.json \
@@ -116,7 +116,7 @@ case ${TASK} in
         echo ">>> Start Evaluation ..."
         cd ${WORK_DIR}
         OUTPUT_DIR=$3
-        bash scripts/benchmark.sh ${OUTPUT_DIR}
+        bash scripts/benchmark-new.sh ${OUTPUT_DIR}
     ;;    
     "finetune.lora")
         echo ">>> Start Visual-Instruction Tuning with LoRA..."

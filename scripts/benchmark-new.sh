@@ -6,8 +6,8 @@ CONV_MODE=v1
 cd ${WORK_DIR}
 
 for step in 2000 4000 6000 8000 10000 12000 14000; do
-  CHCEKPOINT_PATH=/home/onsi/jsun/MobileVLM/outputs/mobilevlm_v2-2.finetune/checkpoint-${step}
-  OUTPUT_DIR_EVAL=/home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation/checkpoint-${step}
+  CHCEKPOINT_PATH=/home/onsi/jsun/MobileVLM/outputs/mobilevlm_v2-2.finetune-1584K/checkpoint-${step}
+  OUTPUT_DIR_EVAL=/home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation-1584k/checkpoint-${step}
   mkdir -p ${OUTPUT_DIR_EVAL}
 
   echo "🧪 Evaluating checkpoint-${step}..."
