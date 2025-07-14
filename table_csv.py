@@ -3,7 +3,7 @@ import re
 import pandas as pd
 
 # 设置包含所有 distill-checkpoint-* 的根目录路径
-root_dir = "/home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation"
+root_dir = "/home/onsi/jsun/MobileVLM/outputs/mobilevlm-3.evaluation-1584k"
 
 # 定义各项指标名称映射
 metrics = ["MME", "GQA", "TextVQA", "POPE", "MMBench", "SQA"]

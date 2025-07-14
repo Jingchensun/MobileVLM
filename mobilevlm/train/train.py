@@ -612,6 +612,37 @@ class LazySupervisedDataset(Dataset):
         list_data_dict = json.load(open(data_path, "r"))
 
         rank0_print("Formatting inputs...Skip in lazy mode")
+        
+        # Filter out samples with missing image files
+        if data_args.image_folder is not None:
+            original_count = len(list_data_dict)
+            valid_data = []
+            missing_files = []
+            
+            for item in list_data_dict:
+                if 'image' in item:
+                    image_path = os.path.join(data_args.image_folder, item['image'])
+                    if os.path.exists(image_path):
+                        valid_data.append(item)
+                    else:
+                        missing_files.append(image_path)
+                else:
+                    # Keep text-only samples
+                    valid_data.append(item)
+            
+            if missing_files:
+                rank0_print(f"Warning: Found {len(missing_files)} missing image files, filtering them out")
+                rank0_print(f"Dataset size reduced from {original_count} to {len(valid_data)} samples")
+                if len(missing_files) <= 10:  # Show first 10 missing files
+                    for missing_file in missing_files:
+                        rank0_print(f"  Missing: {missing_file}")
+                else:
+                    for missing_file in missing_files[:10]:
+                        rank0_print(f"  Missing: {missing_file}")
+                    rank0_print(f"  ... and {len(missing_files) - 10} more")
+            
+            list_data_dict = valid_data
+        
         self.tokenizer = tokenizer
         self.list_data_dict = list_data_dict
         self.data_args = data_args
